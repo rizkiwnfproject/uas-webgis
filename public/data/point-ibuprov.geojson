@@ -1,0 +1,579 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Banda Aceh",
+                "province": "Aceh"
+            },
+            "geometry": {
+                "coordinates": [
+                    95.32176796862615,
+                    5.555878224012872
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Medan",
+                "province": "Sumatera Utara"
+            },
+            "geometry": {
+                "coordinates": [
+                    98.67638185502841,
+                    3.5866889833153834
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Palembang",
+                "province": "Sumatera Selatan"
+            },
+            "geometry": {
+                "coordinates": [
+                    104.7546404154084,
+                    -2.979844090995897
+                ],
+                "type": "Point"
+            },
+            "id": 2
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Padang",
+                "province": "Sumatera Barat"
+            },
+            "geometry": {
+                "coordinates": [
+                    100.361731511794,
+                    -0.9260915768065843
+                ],
+                "type": "Point"
+            },
+            "id": 3
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bengkulu",
+                "province": "Bengkulu"
+            },
+            "geometry": {
+                "coordinates": [
+                    102.26551265024705,
+                    -3.7978877402665034
+                ],
+                "type": "Point"
+            },
+            "id": 4
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pekanbaru",
+                "province": "Riau "
+            },
+            "geometry": {
+                "coordinates": [
+                    101.44760338086638,
+                    0.5239471616173432
+                ],
+                "type": "Point"
+            },
+            "id": 5
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tanjung Pinang",
+                "province": "Kepulauan Riau"
+            },
+            "geometry": {
+                "coordinates": [
+                    104.4437667185341,
+                    0.9287177121361765
+                ],
+                "type": "Point"
+            },
+            "id": 6
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jambi",
+                "province": "Jambi"
+            },
+            "geometry": {
+                "coordinates": [
+                    103.60754124493877,
+                    -1.6312302764181084
+                ],
+                "type": "Point"
+            },
+            "id": 7
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "",
+                "name": "Bandar Lampung",
+                "province": "Lampung "
+            },
+            "geometry": {
+                "coordinates": [
+                    105.26441710918431,
+                    -5.447157438714541
+                ],
+                "type": "Point"
+            },
+            "id": 8
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pangkal Pinang",
+                "province": "Bangka Belitung"
+            },
+            "geometry": {
+                "coordinates": [
+                    106.11438720596288,
+                    -2.128442667666363
+                ],
+                "type": "Point"
+            },
+            "id": 9
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pontianak",
+                "province": "Kalimantan Barat"
+            },
+            "geometry": {
+                "coordinates": [
+                    109.3389466090527,
+                    -0.030250621701952696
+                ],
+                "type": "Point"
+            },
+            "id": 10
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Samarinda",
+                "province": "Kalimantan Timur"
+            },
+            "geometry": {
+                "coordinates": [
+                    117.14915039634332,
+                    -0.5016206091967064
+                ],
+                "type": "Point"
+            },
+            "id": 11
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Banjarbaru",
+                "province": "Kalimantan Selatan"
+            },
+            "geometry": {
+                "coordinates": [
+                    114.82674872075091,
+                    -3.44375519651598
+                ],
+                "type": "Point"
+            },
+            "id": 12
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Palangkaraya",
+                "province": "Kalimantan Tengah"
+            },
+            "geometry": {
+                "coordinates": [
+                    113.91434546497027,
+                    -2.209790543021242
+                ],
+                "type": "Point"
+            },
+            "id": 13
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tanjung Selor",
+                "province": "Kalimantan Utara"
+            },
+            "geometry": {
+                "coordinates": [
+                    117.35719507632655,
+                    2.8503624437149
+                ],
+                "type": "Point"
+            },
+            "id": 14
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Manokwari",
+                "province": "Papua Barat"
+            },
+            "geometry": {
+                "coordinates": [
+                    134.07367077849239,
+                    -0.8649103784922261
+                ],
+                "type": "Point"
+            },
+            "id": 15
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jayapura",
+                "province": "Papua "
+            },
+            "geometry": {
+                "coordinates": [
+                    140.70494418458486,
+                    -2.542450708148891
+                ],
+                "type": "Point"
+            },
+            "id": 16
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nabire",
+                "province": "Papua Tengah"
+            },
+            "geometry": {
+                "coordinates": [
+                    135.50255917668238,
+                    -3.362117430357074
+                ],
+                "type": "Point"
+            },
+            "id": 17
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jayawijaya",
+                "province": "Papua Pegunungan"
+            },
+            "geometry": {
+                "coordinates": [
+                    138.94130450087374,
+                    -4.0958605253054685
+                ],
+                "type": "Point"
+            },
+            "id": 18
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Merauke",
+                "province": "Papua Selatan"
+            },
+            "geometry": {
+                "coordinates": [
+                    140.40154418070443,
+                    -8.498538896228126
+                ],
+                "type": "Point"
+            },
+            "id": 19
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sorong",
+                "province": "Papua Barat Daya"
+            },
+            "geometry": {
+                "coordinates": [
+                    131.24758943933887,
+                    -0.8669644793227747
+                ],
+                "type": "Point"
+            },
+            "id": 20
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ambon",
+                "province": "Maluku "
+            },
+            "geometry": {
+                "coordinates": [
+                    128.180065059257,
+                    -3.69464712302387
+                ],
+                "type": "Point"
+            },
+            "id": 21
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sofifi",
+                "province": "Maluku Utara"
+            },
+            "geometry": {
+                "coordinates": [
+                    127.57437248184874,
+                    0.7351829627386195
+                ],
+                "type": "Point"
+            },
+            "id": 22
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Makassar",
+                "province": "Sulawesi Selatan"
+            },
+            "geometry": {
+                "coordinates": [
+                    119.41407365624747,
+                    -5.13787739398029
+                ],
+                "type": "Point"
+            },
+            "id": 23
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kendari",
+                "province": "Sulawesi Tenggara"
+            },
+            "geometry": {
+                "coordinates": [
+                    122.51680067984228,
+                    -3.9923242134913295
+                ],
+                "type": "Point"
+            },
+            "id": 24
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Manado",
+                "province": "Sulawesi Utara"
+            },
+            "geometry": {
+                "coordinates": [
+                    124.84020248773811,
+                    1.4872284177231023
+                ],
+                "type": "Point"
+            },
+            "id": 25
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Palu",
+                "province": "Sulawesi Tengah"
+            },
+            "geometry": {
+                "coordinates": [
+                    119.86897013469655,
+                    -0.8984222462045324
+                ],
+                "type": "Point"
+            },
+            "id": 26
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mamuju",
+                "province": "Sulawesi Barat "
+            },
+            "geometry": {
+                "coordinates": [
+                    118.88558489240586,
+                    -2.6772918400264274
+                ],
+                "type": "Point"
+            },
+            "id": 27
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Gorontalo",
+                "province": "Gorontalo"
+            },
+            "geometry": {
+                "coordinates": [
+                    123.0617583827443,
+                    0.5404727112922387
+                ],
+                "type": "Point"
+            },
+            "id": 28
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kupang",
+                "province": "Nusa Tenggara Timur"
+            },
+            "geometry": {
+                "coordinates": [
+                    123.60171777139351,
+                    -10.163623926102062
+                ],
+                "type": "Point"
+            },
+            "id": 29
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mataram",
+                "province": "Nusa Tenggara Barat"
+            },
+            "geometry": {
+                "coordinates": [
+                    116.10658096109427,
+                    -8.584578524914264
+                ],
+                "type": "Point"
+            },
+            "id": 30
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Serang",
+                "province": "Banten "
+            },
+            "geometry": {
+                "coordinates": [
+                    106.1524610190969,
+                    -6.116593060707544
+                ],
+                "type": "Point"
+            },
+            "id": 31
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jakarta",
+                "province": "DKI Jakarta",
+                "marker-color": "#7e7e7e",
+                "marker-size": "medium",
+                "marker-symbol": "circle"
+            },
+            "geometry": {
+                "coordinates": [
+                    106.82705778209709,
+                    -6.175635832179594
+                ],
+                "type": "Point"
+            },
+            "id": 32
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bandung",
+                "province": "Jawa Barat"
+            },
+            "geometry": {
+                "coordinates": [
+                    107.60880202397465,
+                    -6.919876791248413
+                ],
+                "type": "Point"
+            },
+            "id": 33
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Semarang",
+                "province": "Jawa Tengah"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.42327250287343,
+                    -6.991237972402715
+                ],
+                "type": "Point"
+            },
+            "id": 34
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Yogyakarta",
+                "province": "Daerah Istimewa Yogyakarta"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.36783246702925,
+                    -7.7906052699245265
+                ],
+                "type": "Point"
+            },
+            "id": 35
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Surabaya",
+                "province": "Jawa Timur"
+            },
+            "geometry": {
+                "coordinates": [
+                    112.73764679102419,
+                    -7.246639321086022
+                ],
+                "type": "Point"
+            },
+            "id": 36
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Denpasar",
+                "province": "Bali"
+            },
+            "geometry": {
+                "coordinates": [
+                    115.21785876540912,
+                    -8.665990546231214
+                ],
+                "type": "Point"
+            },
+            "id": 37
+        }
+    ]
+}

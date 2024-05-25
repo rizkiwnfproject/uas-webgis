@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/leaflet.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/leaflet.css') }}">x
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     {{-- JS --}}
     <script src="{{ asset('js/leaflet.js') }}"></script>
@@ -15,12 +15,16 @@
     {{-- JQuery --}}
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>Webgis</title>
 </head>
 
 <body>
     <div id="map"></ div>
-    <script src="{{ asset('js/maps-custom.js') }}"></script>
+    <script src="{{ asset('js/maps-school-jatim.js') }}"></script>
+    {{-- <script src="{{ asset('js/maps-custom.js') }}"></script> --}}
 </body>
 
 </html>
