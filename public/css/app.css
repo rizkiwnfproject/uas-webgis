@@ -1,3 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+
 #map {
     padding: 0;
     margin: 0;
@@ -5,11 +16,42 @@
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: #323232;
+    /* color: #323232; */
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: #2c3e50;
+    color: #ecf0f1;
 }
 
-.label-bidang{
-    font-size: 10px;
-    color: cyan;
-    text-align: center;
+.sidebar .title-sidebar {
+    font-size: 50px;
 }
+.sidebar .field-sidebar{
+    padding-top: 50px;
+}
+.sidebar .field-sidebar ul li{
+    padding-bottom: 10px;
+}
+.sidebar .field-sidebar ul li a{
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+footer{
+    background-color: red;
+    width: 100vw;
+}
+
+
+
+
+.link-text {
+    text-decoration: none;
+    color: #ecf0f1;
+}
+
+
+

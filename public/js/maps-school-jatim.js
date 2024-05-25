@@ -1,46 +1,9 @@
-var map = L.map('map').setView([-7.250445, 112.768845], 8);
+var map = L.map('map').setView([51.505, -0.09], 13);
 
-// Basemap
-
-// Satelite {https://stackoverflow.com/questions/33343881/leaflet-in-google-maps}
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Marker
-var hospitalIcon = L.icon({
-    iconUrl: 'images/hospital-building.png',
-
-    iconSize: [50, 50], // size of the icon
-    iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
-
-// get geojson
-axios.get('/data/indonesia_villages_border.geojson')
-    .then(function (response) {
-        L.geoJSON(response.data, {
-            onEachFeature: function (feature, layer) {
-                if (feature.properties && feature.properties.Provinsi) {
-                    layer.bindPopup(feature.properties.Provinsi);
-                }
-            }
-        }).addTo(map);
-    })
-    .catch(function (error) {
-        console.error(error);
-    });
-axios.get('/data/ibukota-provinsi.geojson')
-    .then(function (response) {
-        L.geoJSON(response.data, {
-            onEachFeature: function (feature, layer) {
-                if (feature.properties && feature.properties.name) {
-                    layer.bindPopup(feature.properties.name);
-                }
-            }
-        }).addTo(map);
-    })
-    .catch(function (error) {
-        console.error(error);
-    });
+L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+    .openPopup();
