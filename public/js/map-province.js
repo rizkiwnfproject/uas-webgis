@@ -1,9 +1,7 @@
 var map = L.map('map').setView([-2.548926, 118.0148634], 5);
 
 // Satelite {https://stackoverflow.com/questions/33343881/leaflet-in-google-maps}
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 var boundariesLayer;
 var capitalsLayer;

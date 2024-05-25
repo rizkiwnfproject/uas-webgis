@@ -1,43 +1,36 @@
-﻿Provinsi,Jumlah Kasus Penyakit - HIV/AIDS Kasus Baru,Jumlah Kasus Penyakit - Malaria (Suspek),Jumlah Kasus Penyakit - TB Paru,Jumlah Kasus Penyakit - Pneumonia,Jumlah Kasus Penyakit - Kusta,Jumlah Kasus Penyakit - Tetanus Neonatorum,Jumlah Kasus Penyakit - Campak,Jumlah Kasus Penyakit - Diare,Jumlah Kasus Penyakit - Demam Berdarah Dengue (DBD),Jumlah Kasus Penyakit - HIV/AIDS Kasus Kumulatif,Jumlah Kasus Penyakit - Infeksi Menular Seksual (IMS)
-Aceh,89,29719,3321,2615,363,1,1619,76753,1533,497,
-Sumatera Utara,149,21974,14908,5026,177,,144,128226,5623,4065,
-Sumatera Barat,347,3471,4802,10341,63,,205,122440,2203,1958,
-Riau,269,2770,5705,5782,113,1,160,81092,918,2470,
-Jambi,25,12345,5947,4080,80,1,291,73063,720,739,
-Sumatera Selatan,246,7234,1609,12097,299,2,505,166002,2404,1115,
-Bengkulu,55,13307,2758,876,27,,92,21313,1419,415,
-Lampung,143,12947,1233,8088,228,1,346,134215,2872,892,
-Kepulauan Bangka Belitung,38,5345,7325,5135,45,,61,19572,760,503,
-Kepulauan Riau,289,2153,945,1429,88,,88,25107,1204,1573,
-DKI Jakarta,717,60,24545,42305,344,,578,305841,2965,9932,
-Jawa Barat,247,14004,8650,124475,2102,,254,393434,8732,6749,
-Jawa Tengah,1941,21758,13649,52032,859,,473,583700,3133,10111,
-DI Yogyakarta,48,2876,36075,6021,42,,546,68043,547,1459,
-Jawa Timur,1586,15578,20535,92913,2701,,401,819729,8449,19829,
-Banten,207,84,1444,33775,360,,49,248242,1023,2989,
-Bali,549,918,2790,4777,95,,480,68142,904,7990,
-Nusa Tenggara Barat,27,49100,630,20229,226,,201,141522,535,813,
-Nusa Tenggara Timur,94,331482,4420,2990,330,,59,52621,1333,2059,
-Kalimantan Barat,95,26496,1394,1835,89,1,122,64772,3097,2695,
-Kalimantan Tengah,25,13859,3087,602,68,3,59,39124,2245,272,
-Kalimantan Selatan,,19573,8165,11159,161,,251,68189,2001,405,
-Kalimantan Timur,171,8678,4298,5772,180,,298,71780,3204,1572,
-Kalimantan Utara,267,4063,1436,340,28,,169,8275,172,539,
-Sulawesi Utara,332,15640,2934,409,443,,22,20982,1608,1799,
-Sulawesi Tengah,2,19007,3578,7751,287,,,58876,1067,763,
-Sulawesi Selatan,337,13751,1693,5140,914,,330,168581,2114,3416,
-Sulawesi Tenggara,113,13306,3902,3374,289,,38,31394,624,561,
-Gorontalo,5,4197,1784,2385,134,,21,20887,813,215,
-Sulawesi Barat,,23018,3340,1450,220,,158,36704,532,25,
-Maluku,68,66853,1931,955,306,,16,4097,317,729,
-Maluku Utara,108,18329,1143,1130,630,,,13763,110,637,
-Papua Barat,,92410,747,411,640,,2,9956,228,1741,
-Papua,1601,432331,3671,379,1466,,391,19352,193,22538,
-Indonesia,10190,1318636,204394,478078,14397,10,8429,4165789,65602,114065,
-,,,,,,,,,,,
-Catatan,,,,,,,,,,,
-<sup>1</sup> Pneumonia pada balita/<i>Pneumonia in children under five years old </i>,,,,,,,,,,,
-<sup>2</sup> Jumlah penderita diare yang dilayani di fasilitas kesehatan/<i>Numbers of diarrhea patients served in health facilities</i>,,,,,,,,,,,
-<sup>3</sup> Sampai dengan Januari 2019/<i>Up to January 2019</i>,,,,,,,,,,,
-<sup>4</sup> Data kasus AIDS pada publikasi tahun bersangkutan dapat berbeda dengan dengan publikasi tahun sebelumnya dikarenakan terdapat penambahan kasus yang belum terlaporkan/<i>The case data of AIDS in the newest publication may be different from the previous years publication due to the addiction of unreported cases,,,,,,,,,,,
-</i>,,,,,,,,,,,
+﻿Provinsi;Kusta
+Bengkulu;27
+Kalimantan Utara;28
+DI Yogyakarta;42
+Kepulauan Bangka Belitung;45
+Sumatera Barat;63
+Kalimantan Tengah;68
+Jambi;80
+Kepulauan Riau;88
+Kalimantan Barat;89
+Bali;95
+Riau;113
+Gorontalo;134
+Kalimantan Selatan;161
+Sumatera Utara;177
+Kalimantan Timur;180
+Sulawesi Barat;220
+Nusa Tenggara Barat;226
+Lampung;228
+Sulawesi Tengah;287
+Sulawesi Tenggara;289
+Sumatera Selatan;299
+Maluku;306
+Nusa Tenggara Timur;330
+DKI Jakarta;344
+Banten;360
+Aceh;363
+Sulawesi Utara;443
+Maluku Utara;630
+Papua Barat;640
+Jawa Tengah;859
+Sulawesi Selatan;914
+Papua;1466
+Jawa Barat;2102
+Jawa Timur;2701
+Indonesia;14397

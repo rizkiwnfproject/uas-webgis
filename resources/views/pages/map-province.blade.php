@@ -4,10 +4,10 @@
 
 @section('content')
     <div id="map-province">
-        <div class="container p-4">
+        <div class="container px-4 pt-4">
             <div id="map"></div>
             <div id="controls-province">
-                <input type="radio" id="showBoundaries" name="displayOption" value="boundaries" checked>
+                <input type="radio" id="showBoundaries" name="displayOption" value="boundaries">
                 <label for="showBoundaries">Batas Provinsi</label>
                 <br>
                 <input type="radio" id="showCapitals" name="displayOption" value="capitals">

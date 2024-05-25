@@ -1,122 +1,84 @@
 var map = L.map('map').setView([-2.548926, 118.0148634], 5);
 
 // Satelite {https://stackoverflow.com/questions/33343881/leaflet-in-google-maps}
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-var campakLayer;
-var capitalsLayer;
-var citiesLayer;
-var displayOption = 'both';
+let boundariesLayer;
+let selectedDisease = document.querySelector('input[name="disease"]:checked').value;;
 
-var colors = ['#a6cee3', '#1f78b4', '#b2df8a', '#33a02c', '#fb9a99', '#e31a1c', '#fdbf6f', '#ff7f00', '#cab2d6', '#6a3d9a', '#ffff99', '#b15928', '#b35806', '#e08214', '#fdb863', '#fee0b6', '#f7f7f7', '#d8daeb', '#b2abd2', '#8073ac', '#542788', '#c51b7d', '#de77ae', '#f1b6da', '#fde0ef', '#e6f5d0', '#b8e186', '#7fbc41', '#01665e', '#4d9221', '#35978f', '#f5f5f5',];
-function getColor(index) {
-    return colors[index % colors.length];
+function getColor(cases, disease) {
+    if (disease === 'Tetanus') {
+        return cases > 2 ? '#f03b20' :
+            cases > 1 ? '#feb24c' :
+                '#ffeda0';
+    } else if (disease === 'Campak' || disease === 'Kusta') {
+        return cases > 500 ? '#800026' :
+            cases > 300 ? '#BD0026' :
+                cases > 200 ? '#E31A1C' :
+                    cases > 100 ? '#FC4E2A' :
+                        cases > 50 ? '#FD8D3C' :
+                            cases > 10 ? '#FEB24C' :
+                                '#FED976';
+    } else if (disease === 'TBC' || disease === 'HIV/AIDS') {
+        return cases > 20000 ? '#800026' :
+            cases > 10000 ? '#BD0026' :
+                cases > 5000 ? '#E31A1C' :
+                    cases > 3000 ? '#FC4E2A' :
+                        cases > 1000 ? '#FD8D3C' :
+                            cases > 500 ? '#FEB24C' :
+                                '#FED976';
+    } else if (disease === 'Diare') {
+        return cases > 200000 ? '#800026' :
+            cases > 100000 ? '#BD0026' :
+                cases > 50000 ? '#E31A1C' :
+                    cases > 30000 ? '#FC4E2A' :
+                        cases > 10000 ? '#FD8D3C' :
+                            cases > 1000 ? '#FEB24C' :
+                                '#FED976';
+    } else if (disease === 'DBD') {
+        return cases > 5000 ? '#800026' :
+            cases > 3000 ? '#BD0026' :
+                cases > 1000 ? '#E31A1C' :
+                    cases > 500 ? '#FC4E2A' :
+                        cases > 100 ? '#FD8D3C' :
+                            cases > 10 ? '#FEB24C' :
+                                '#FED976';
+    } else {
+        return cases > 50000 ? '#800026' :
+            cases > 20000 ? '#BD0026' :
+                cases > 10000 ? '#E31A1C' :
+                    cases > 5000 ? '#FC4E2A' :
+                        cases > 2000 ? '#FD8D3C' :
+                            cases > 1000 ? '#FEB24C' :
+                                cases > 500 ? '#FED976' :
+                                    '#FFEDA0';
+    }
 }
 
-function loadGeoJSON() {
-    if (boundariesLayer) {
-        map.removeLayer(boundariesLayer);
-    }
-    if (capitalsLayer) {
-        map.removeLayer(capitalsLayer);
-    }
-    if (citiesLayer) {
-        map.removeLayer(citiesLayer);
-    }
+function styleFeature(feature) {
+    const cases = feature.properties[selectedDisease];
+    return {
+        fillColor: getColor(cases, selectedDisease),
+        fillOpacity: 0.7,
+        color: '#000',
+        weight: 1,
+        opacity: 1
+    };
+}
 
-    // Load boundaries layer if selected
-    if (displayOption === 'both' || displayOption === 'boundaries') {
-        loadBoundariesLayer();
-    } else if (displayOption === 'both' || displayOption === 'cities') {
-        // Load capitals layer directly if only capitals are selected
-        loadCitiesLayer();
-    } else {
-        loadCapitalsLayer();
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.Provinsi) {
+        const popupContent = `<b>ID:</b> ${feature.properties.ID}<br><b>Provinsi:</b> ${feature.properties.Provinsi}<br><b>${selectedDisease}:</b> ${feature.properties[selectedDisease]}`;
+        layer.bindPopup(popupContent);
     }
 }
 
 function loadBoundariesLayer() {
-    axios.get('/data/polygon-province.geojson')
+    axios.get('/data/persebaran-penyakit.geojson')
         .then(function (response) {
             boundariesLayer = L.geoJSON(response.data, {
-                style: function (feature) {
-                    var fillColor = getColor(feature.properties.ID);
-                    return {
-                        fillColor: fillColor,
-                        fillOpacity: 0.5,
-                        color: '#000',
-                        weight: 1,
-                        opacity: 1
-                    };
-                },
-                onEachFeature: function (feature, layer) {
-                    if (feature.properties && feature.properties.Provinsi) {
-                        var popupContent = "<b>ID:</b> " + feature.properties.ID + "<br><b>Provinsi:</b> " + feature.properties.Provinsi;
-                        layer.bindPopup(popupContent);
-                    }
-                }
-            }).addTo(map);
-
-            // Load capitals layer if selected
-            if (displayOption === 'both' || displayOption === 'cities') {
-                loadCitiesLayer();
-            }
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
-}
-
-function loadCapitalsLayer() {
-    axios.get('/data/point-ibuprov.geojson')
-        .then(function (response) {
-            capitalsLayer = L.geoJSON(response.data, {
-                pointToLayer: function (feature, latlng) {
-                    return L.circleMarker(latlng, {
-                        radius: 8,
-                        fillColor: "#ff7800",
-                        color: "#000",
-                        weight: 1,
-                        opacity: 1,
-                        fillOpacity: 0.8
-                    });
-                },
-                onEachFeature: function (feature, layer) {
-                    if (feature.properties && feature.properties.name) {
-                        layer.bindPopup("<b>" + feature.properties.name + "</b><br>" + feature.properties.capital);
-                    }
-                }
-            }).addTo(map);
-
-            // Bring the markers to the front
-            capitalsLayer.bringToFront();
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
-}
-
-function loadCitiesLayer() {
-    axios.get('/data/point-kota-indonesia.geojson')
-        .then(function (response) {
-            capitalsLayer = L.geoJSON(response.data, {
-                pointToLayer: function (feature, latlng) {
-                    return L.circleMarker(latlng, {
-                        radius: 8,
-                        fillColor: "#ff7800",
-                        color: "#000",
-                        weight: 1,
-                        opacity: 1,
-                        fillOpacity: 0.8,
-                        zIndexOffset: 1
-                    });
-                },
-                onEachFeature: function (feature, layer) {
-                    layer.bindPopup("<b>" + feature.properties.name);
-                    // layer.bindPopup("<b>" + feature.properties.name + "</b><br>" + feature.properties.province);
-                }
+                style: styleFeature,
+                onEachFeature: onEachFeature
             }).addTo(map);
         })
         .catch(function (error) {
@@ -124,15 +86,71 @@ function loadCitiesLayer() {
         });
 }
 
-// Load GeoJSON layers with default option
-loadGeoJSON();
+function updateMap() {
+    if (boundariesLayer) {
+        map.removeLayer(boundariesLayer);
+    }
+    loadBoundariesLayer();
+}
 
-// Add event listener to radio buttons to change display option
-var radios = document.querySelectorAll('input[name="displayOption"]');
-radios.forEach(function (radio) {
+loadBoundariesLayer();
+
+var radios = document.querySelectorAll('input[name="disease"]').forEach(radio => {
     radio.addEventListener('change', function () {
-        displayOption = this.value;
-        loadGeoJSON();
+        selectedDisease = this.value;
+        loadBoundariesLayer();
     });
 });
-// get geojson
+
+// Membuat legend
+function createLegend() {
+    var legend = L.control({ position: 'bottomright' });
+
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'legend');
+        var grades = [];
+        var labels = [];
+
+        // Mendapatkan nilai-nilai untuk legend berdasarkan penyakit yang dipilih
+        if (selectedDisease === 'Tetanus') {
+            grades = [0, 1, 2];
+            labels = ['0', '1', '2+'];
+        } else if (selectedDisease === 'Campak' || selectedDisease === 'Kusta') {
+            grades = [0, 10, 50, 100, 200, 300, 500];
+        } else if (selectedDisease === 'TBC' || selectedDisease === 'HIV/AIDS') {
+            grades = [0, 500, 1000, 3000, 5000, 10000, 20000];
+        } else if (selectedDisease === 'Diare') {
+            grades = [0, 1000, 10000, 30000, 50000, 100000, 200000];
+        } else if (selectedDisease === 'DBD') {
+            grades = [0, 10, 100, 500, 1000, 3000, 5000];
+        } else {
+            grades = [0, 500, 1000, 2000, 5000, 10000, 20000, 50000];
+        }
+
+        // Generate labels for each grade
+        for (var i = 0; i < grades.length; i++) {
+            var color = getColor(grades[i] + 1, selectedDisease); // Mendapatkan warna berdasarkan nilai grade
+            var labels = grades[i] + (grades[i + 1] ? ' &ndash; ' + grades[i + 1] : '+'); // Label grade
+            div.innerHTML += '<i style="background:' + color + '"></i> ' + labels + '<br>'; // Menambahkan warna dan label ke dalam div
+        }
+
+        return div;
+    };
+
+    return legend;
+}
+
+// Membuat legend dan menambahkannya ke dalam peta
+var legend = createLegend();
+legend.addTo(map);
+
+// Event listener untuk radio button
+var radios = document.querySelectorAll('input[name="disease"]').forEach(radio => {
+    radio.addEventListener('change', function () {
+        selectedDisease = this.value;
+        legend.remove(); // Menghapus legend yang lama
+        legend = createLegend(); // Membuat legend yang baru
+        legend.addTo(map); // Menambahkan legend yang baru ke dalam peta
+        loadBoundariesLayer(); // Memuat kembali layer batas provinsi
+    });
+});
