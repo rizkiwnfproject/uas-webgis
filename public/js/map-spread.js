@@ -1,4 +1,4 @@
-var map = L.map('map').setView([-7.250445, 112.768845], 8);
+var map = L.map('map').setView([-2.548926, 118.0148634], 5);
 
 // Basemap
 // Satelite {https://stackoverflow.com/questions/33343881/leaflet-in-google-maps}

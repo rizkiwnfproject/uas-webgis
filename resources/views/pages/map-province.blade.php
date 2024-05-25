@@ -13,8 +13,11 @@
                 <input type="radio" id="showCapitals" name="displayOption" value="capitals">
                 <label for="showCapitals">Tampilkan Ibu Kota Provinsi</label>
                 <br>
-                <input type="checkbox" id="showBoth" name="showBoth">
-                <label for="showBoth">Tampilkan Keduanya</label>
+                <input type="radio" id="showCities" name="displayOption" value="cities">
+                <label for="showCities">Tampilkan Kota/Kabupaten di Indonesia</label>
+                <br>
+                <input type="radio" id="showBoth" name="displayOption" value="both" checked>
+                <label for="showBoth">Tampilkan Semuanya</label>
             </div>
         </div>
     </div>
