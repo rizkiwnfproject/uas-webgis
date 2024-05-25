@@ -4,20 +4,20 @@
 
 @section('content')
     <div id="map-province">
-        <div class="container">
+        <div class="container p-4">
             <div id="map"></div>
-            <div id="controls">
+            <div id="controls-province">
                 <input type="radio" id="showBoundaries" name="displayOption" value="boundaries" checked>
-                <label for="showBoundaries">Tampilkan Batas Wilayah</label>
+                <label for="showBoundaries">Batas Provinsi</label>
                 <br>
                 <input type="radio" id="showCapitals" name="displayOption" value="capitals">
-                <label for="showCapitals">Tampilkan Ibu Kota Provinsi</label>
+                <label for="showCapitals">Ibukota Provinsi</label>
                 <br>
                 <input type="radio" id="showCities" name="displayOption" value="cities">
-                <label for="showCities">Tampilkan Kota/Kabupaten di Indonesia</label>
+                <label for="showCities">Kota/Kabupaten</label>
                 <br>
                 <input type="radio" id="showBoth" name="displayOption" value="both" checked>
-                <label for="showBoth">Tampilkan Semuanya</label>
+                <label for="showBoth">Semuanya</label>
             </div>
         </div>
     </div>

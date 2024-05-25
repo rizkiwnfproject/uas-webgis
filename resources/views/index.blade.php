@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- local style --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/poppins.css') }}">
     {{-- leaflet --}}
     <link rel="stylesheet" href="{{ asset('css/leaflet.css') }}">
@@ -39,9 +40,7 @@
             </div>
         </div>
     </div>
-
-
-    {{-- @include('components.footer') --}}
+    @include('components.footer')
 
     {{-- bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
