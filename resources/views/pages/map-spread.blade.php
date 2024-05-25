@@ -4,7 +4,7 @@
 
 @section('content')
     <div id="map-spread">
-        <div class="container px-4 pt-3 pb-3">
+        <div class="container p-4">
             <div id="map"></div>
             <div id="controls-province">
                 <input type="radio" id="showCampak" name="disease" value="Campak" checked>

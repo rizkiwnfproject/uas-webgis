@@ -8,6 +8,7 @@
     {{-- local style --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/poppins.css') }}">
     {{-- leaflet --}}
     <link rel="stylesheet" href="{{ asset('css/leaflet.css') }}">
@@ -29,7 +30,7 @@
     <title>@yield('title')</title>
 </head>
 
-<body>
+<body style="background-color: #f5f5f5">
     <div class="row">
         <div class="col-lg-2">
             @include('components.sidebar')
@@ -45,8 +46,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    {{-- leaflet --}}
-
+    {{-- ChartJS --}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     {{-- JQuery --}}
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
@@ -68,6 +69,8 @@
             document.write('');
         }
     </script>
+    <script src="{{ asset('js/sidebar.js') }}"></script>
+    <script src="{{ asset('js/chart.js') }}"></script>
 </body>
 
 </html>

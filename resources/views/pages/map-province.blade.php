@@ -4,7 +4,7 @@
 
 @section('content')
     <div id="map-province">
-        <div class="container px-4 pt-4">
+        <div class="container p-4">
             <div id="map"></div>
             <div id="controls-province">
                 <input type="radio" id="showBoundaries" name="displayOption" value="boundaries">

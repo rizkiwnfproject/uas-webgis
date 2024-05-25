@@ -6,24 +6,35 @@
     color: #ecf0f1;
 }
 
+.sidebar .logo-sidebar {
+    padding: 30px 10px 5px 20px;
+}
+
 .sidebar .title-sidebar {
     font-size: 50px;
 }
 
 .sidebar .field-sidebar {
-    padding-top: 50px;
+    padding: 30px 10px 5px 10px;
 }
 
 .sidebar .field-sidebar ul li {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .sidebar .field-sidebar ul li a {
     color: #ecf0f1;
     text-decoration: none;
+    padding: 10px;
 }
 
 .link-text {
     text-decoration: none;
     color: #ecf0f1;
+}
+
+.field-sidebar a.active {
+    color: #ffffff;
+    background-color: #5b6a78b8;
+    border-radius: 0.25rem;
 }
